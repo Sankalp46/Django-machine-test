@@ -1,0 +1,40 @@
+<title>Login Page</title>
+</head>
+<body style="font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://img.freepik.com/premium-vector/geometric-gradient-technology-background_23-2149110132.jpg');
+            background-size: cover;
+            background-position: center;">
+
+    <div class="login-container" style="width: 300px;
+                                        padding: 20px;
+                                        border: 1px solid #7d5b5b;
+                                        border-radius: 5px;">
+        <h2>Login</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Login" style="background-color: #4CAF50;
+                                                        color: rgb(107, 84, 84);
+                                                        border: none;
+                                                        cursor: pointer;
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        margin: 8px 0;
+                                                        display: inline-block;
+                                                        border-radius: 4px;
+                                                        box-sizing: border-box;">
+        </form>
+        <hr>
+        <p>New user? <a href="/new/">Create an account</a></p>
+    </div>
+</body>
+</html>
